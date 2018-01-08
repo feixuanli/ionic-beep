@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the LoginPage page.
@@ -15,10 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
 
-  constructor(private navCtrl: NavController, private navParams: NavParams) {
-  }
-  navigateToPage(pageName: string){
-    pageName === 'TabsPage'? this.navCtrl.setRoot(pageName):this.navCtrl.push(pageName);
+  constructor() {
   }
 
  
