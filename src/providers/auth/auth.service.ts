@@ -15,6 +15,9 @@ export class AuthService {
   constructor(private afAuth: AngularFireAuth) {
   
   }
+  getAuthenticateUser(){
+    return this.afAuth.authState;
+  }
   async signWithEmailAndPassword(account: Account) {
     try {
       return <LoginResponse> {
