@@ -10,6 +10,7 @@ import { AuthService } from '../providers/auth/auth.service';
 import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { DataService } from '../providers/data/data.service';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     MyApp,
@@ -19,7 +20,8 @@ import { DataService } from '../providers/data/data.service';
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    FormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
