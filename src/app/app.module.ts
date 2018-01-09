@@ -7,7 +7,7 @@ import { AngularFireModule } from 'angularfire2';
 import { MyApp } from './app.component';
 import { FIREBASE_CONFIG } from './app.firebase.config';
 import { AuthService } from '../providers/auth/auth.service';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { DataService } from '../providers/data/data.service';
 @NgModule({
