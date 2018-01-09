@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MESSAGE_LIST } from '../../mocks/messages/message';
-import { Message } from '../../models/messages/message.interface';
 /**
- * Generated class for the InboxPage page.
+ * Generated class for the EditProfilePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,15 +9,16 @@ import { Message } from '../../models/messages/message.interface';
 
 @IonicPage()
 @Component({
-  selector: 'page-inbox',
-  templateUrl: 'inbox.html',
+  selector: 'page-edit-profile',
+  templateUrl: 'edit-profile.html',
 })
-export class InboxPage {
-  messageList: Message[] = MESSAGE_LIST;
+export class EditProfilePage {
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
+    console.log('ionViewDidLoad EditProfilePage');
   }
 
 }
