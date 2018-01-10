@@ -5,17 +5,15 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
     <ion-title>profile</ion-title>
     <ion-buttons end>
       <button ion-button (click)="navigateToEditProfilePage()">edit</button>
     </ion-buttons>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content>
 <app-profile-view (existingProfile)="getExsitingProfile($event)"></app-profile-view>
+<button ion-button block (click)="signOut()">sign out</button>
 </ion-content>
