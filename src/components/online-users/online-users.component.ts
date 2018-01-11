@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../providers/data/data.service';
 import { FirebaseListObservable } from 'angularfire2/database-deprecated';
 import { Profile } from '../../models/profile/profile.interface';
+import { NavController } from 'ionic-angular/navigation/nav-controller';
 
 /**
  * Generated class for the OnlineUsersComponent component.
@@ -28,8 +29,11 @@ export class OnlineUsersComponent implements OnInit{
   getOnlineUsers(){
     this.userList = this.data.getOnlineUsers();
   }
-  constructor(private data: DataService){
+  constructor(private data: DataService, private navCtrl: NavController){
 
+  }
+  openChat(profile: Profile){
+    this.navCtrl.push('MessagePage', {profile});
   }
 
 }
