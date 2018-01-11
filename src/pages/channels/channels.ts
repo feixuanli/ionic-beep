@@ -24,6 +24,9 @@ export class ChannelsPage {
   getChannel(){
     this.channelList =  this.chat.getChannelListRef();
   }
+  selectChannel(channel: Channel) {
+    this.navCtrl.push('ChannelChatPage', {channel});
+  }
   ionViewWillLoad(){
     this.getChannel();
   }
