@@ -7,6 +7,7 @@ import 'rxjs/add/operator/take';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
 import { AuthService } from '../auth/auth.service';
+import { database } from 'firebase';
 
 /*
   Generated class for the DataProvider provider.
@@ -50,5 +51,17 @@ export class DataService {
       console.error(e);
       return false;
     }
+  }
+  setUserOnline(profile: Profile){
+    const ref = database().ref(`online-users/${profile.$key}`);
+    try {
+      ref.update({...profile});
+      ref.onDisconnect().remove();
+    } catch(e) {
+      console.error(2);
+    }
+  }
+  getOnlineUsers(): FirebaseListObservable<Profile[]>{
+    return this.database.list(`online-users`);
   }
 }
