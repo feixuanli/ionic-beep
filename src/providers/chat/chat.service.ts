@@ -9,5 +9,8 @@ export class ChatService {
     addChannel(channelName:String) {
         this.database.list(`/channel-names/`).push({name: channelName});
     }
+    getChannelListRef(){
+        return this.database.list('channel-names');
+    }
 
 }
