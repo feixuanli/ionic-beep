@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "beep-e0788"
+    "default": "beep-e0788",
+    "beep": "beep-e0788"
   }
 }
